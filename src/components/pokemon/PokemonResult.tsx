@@ -70,7 +70,7 @@ export default function PokemonResult({ name }: { name: string }) {
           <p className="font-mono text-yellow text-[14px] uppercase tracking-[2px] mb-2">
             {pokemon.classification}
           </p>
-          <h1 className="font-display text-[60px] sm:text-[80px] font-black leading-[0.8] tracking-tight text-hazard-white uppercase mb-6">
+          <h1 className="font-display text-[60px] sm:text-[80px] font-black leading-[0.8] tracking-wide text-hazard-white uppercase mb-6">
             {pokemon.name}
           </h1>
 

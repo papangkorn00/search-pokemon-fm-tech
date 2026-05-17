@@ -18,7 +18,7 @@ export default async function Home({
         <div className="mb-16 bg-absolute-black/60 backdrop-blur-md p-8 sm:p-12 border border-purple rounded-card shadow-2xl relative overflow-hidden">
 
           <h1 className="font-display font-black text-[40px] sm:text-[70px] tracking-tight text-hazard-white mb-4 leading-none flex flex-col xl:flex-row xl:items-baseline gap-2 xl:gap-4">
-            <span className="uppercase">POKÉMON <span className="text-yellow">EXPLORER</span></span>
+            <span className="uppercase tracking-wide">POK<span className="text-red-500">É</span>MON <span className="text-yellow">EXPLORER</span></span>
             <span className="font-mono text-[30px] text-blue-500 tracking-[1px] lowercase font-semibold">(search-pokemon-fm-tech)</span>
           </h1>
 
