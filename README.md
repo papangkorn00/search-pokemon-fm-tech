@@ -1,8 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pokémon Explorer (search-pokemon-fm-tech)
 
-## Getting Started
+## 1. Implemented Functional Requirements
 
-First, run the development server:
+### Search Input Component
+- **Search by Name:** Allows users to search for Pokémon by name.
+- **URL Query Parameter:** Reads and reflects the search value from a URL query parameter.
+
+### Result Component
+- **Data Display:** Displays all available information for the searched Pokémon.
+- **"Not Found" State:** Shows a “not found” state when no Pokémon matches the search query.
+- **Detailed Pokémon View:**
+  - **Attacks:** Lists the Pokémon's attacks.
+  - **Evolutions:** Displays the evolutionary chain of the Pokémon.
+- **Interactive Evolutions:**
+  - Clicking an evolution’s name updates the search query parameter in the URL.
+  - Displays the selected evolution’s result.
+
+## 2. Optional Requirements
+
+- **GraphQL & Caching:** Used Apollo Client for data fetching and caching (Server and Client-side) via `src/app/ApolloWrapper.tsx` and `src/app/ApolloClient.ts`. This replaces manual `fetch` calls and handles state.
+- **Search History:** Added a search history feature that uses `localStorage` to save recently searched Pokémon.
+- **Unit Testing:** Wrote tests using **Jest**. Includes mock data for Pokémon (Bulbasaur, Charmander, Squirtle) and checks if they map to the correct elemental types.
+
+## 3. Folder Structure
+
+```text
+search-pokemon-fm-tech/
+├── __tests__/         # Unit tests (Jest)
+├── public/            # Static assets
+├── src/
+│   ├── app/           # Next.js App Router (Pages, Layout, Apollo Provider)
+│   ├── components/    # Reusable UI components
+│   │   ├── pokemon/   # Pokémon result components
+│   │   ├── search/    # Search input components
+│   │   └── ui/        # Shared UI components (Tailwind)
+│   └── types/         # TypeScript definitions
+├── jest.config.ts     # Jest configuration
+├── next.config.ts     # Next.js configuration
+├── package.json       # Project dependencies
+└── README.md          # Project documentation
+```
+
+---
+
+### Getting Started Locally
+
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -15,22 +70,3 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
