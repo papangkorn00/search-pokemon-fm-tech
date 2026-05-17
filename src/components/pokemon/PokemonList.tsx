@@ -86,7 +86,7 @@ export default function PokemonList() {
         <button
           onClick={handleLoadMorePokemon}
           disabled={isPending}
-          className="px-[24px] py-[10px] bg-yellow text-absolute-black font-mono text-[12px] font-semibold uppercase tracking-[1.5px] rounded-feature hover:bg-white/20 hover:shadow-[0_0_0_1px_#c2c2c2] disabled:opacity-50 transition-all duration-150"
+          className="cursor-pointer px-[24px] py-[10px] bg-yellow text-absolute-black font-mono text-[12px] font-semibold uppercase tracking-[1.5px] rounded-feature hover:bg-white/20 hover:shadow-[0_0_0_1px_#c2c2c2] disabled:opacity-50 transition-all duration-150"
         >
           {isPending ? "LOADING..." : "LOAD MORE POKÉMON"}
         </button>
