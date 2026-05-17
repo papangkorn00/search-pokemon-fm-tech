@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-canvas: #131313;
+  --color-yellow: #F3D23B;
+  --color-purple: #5200ff;
+  --color-yellow-border: #CFA613;
+  --color-deep-blue: #3860be;
+  --color-slate: #2d2d2d;
+  --color-image-frame: #313131;
+  --color-hazard-white: #ffffff;
+  --color-absolute-black: #000000;
+  --color-muted: #e9e9e9;
+  --color-secondary: #949494;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-display: Impact, Helvetica, sans-serif;
+  --font-sans: Helvetica, Arial, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --radius-badge: 2px;
+  --radius-image: 3px;
+  --radius-nested: 4px;
+  --radius-card: 20px;
+  --radius-feature: 24px;
+  --radius-pill: 30px;
+  --radius-pill-large: 40px;
+  --radius-full: 50%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-canvas);
+  background-image: 
+    linear-gradient(rgba(19, 19, 19, 0.80), rgba(19, 19, 19, 0.80)),
+    url('/images/pokemon-group.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: var(--color-hazard-white);
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
+}
+
+/* Base link hover behavior */
+a {
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: var(--color-deep-blue) !important;
+}
+
+/* StoryStream Timeline Rail */
+.story-stream-rail {
+  position: relative;
+}
+.story-stream-rail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background-color: var(--color-purple);
+  z-index: 0;
 }
